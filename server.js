@@ -9,6 +9,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {
     var now = new Date().toString();
+    next();
 });
 
 hbs.registerHelper('getCurrentYear', () => {
